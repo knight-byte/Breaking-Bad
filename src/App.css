@@ -3,4 +3,5 @@ html {
   margin: 0;
   height: 100%;
   font-family: "Rajdhani", sans-serif;
+  scroll-snap-type: y proximity;
 }

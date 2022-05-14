@@ -9,4 +9,5 @@ export const SeasonsContainer = styled.div`
   align-items: center;
   background-position: center center;
   font-family: "Rajdhani", sans-serif;
+  scroll-snap-align: start;
 `;

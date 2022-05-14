@@ -6,6 +6,7 @@ import {
   AboutSectionContainer,
   AboutTextContent,
   SayMyName,
+  SayMyNameFlex,
 } from "./about.module";
 import posterPng from "../../assets/images/about-poster.png";
 import React from "react";
@@ -18,10 +19,12 @@ const AboutSection = React.forwardRef<HTMLDivElement, AboutSectionProps>(
     return (
       <>
         <AboutSectionContainer ref={ref}>
-          <SayMyName color="rgba(0, 0, 10, 0)" strokeSize="2px">
-            SAY MY
-          </SayMyName>
-          <SayMyName margin="200px 50px 200px 100px">NAME</SayMyName>
+          <SayMyNameFlex>
+            <SayMyName color="rgba(0, 0, 10, 0)" strokeSize="2px">
+              SAY MY
+            </SayMyName>
+            <SayMyName paddingLeft="320px">NAME</SayMyName>
+          </SayMyNameFlex>
           <AboutFlexWrapper>
             <AboutTextContent>
               <TextContent fontSize="70px" fontWeight={500}>

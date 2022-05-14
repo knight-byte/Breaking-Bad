@@ -12,6 +12,9 @@ export const VerticalNavContainer = styled.div`
   right: 2%;
   top: 20%;
   align-items: center;
+  @media only screen and (max-width: 728px) {
+    display: none;
+  }
 `;
 
 export const VerticalNavLink = styled.p`
@@ -20,6 +23,9 @@ export const VerticalNavLink = styled.p`
   transform: rotate(180deg);
   font-size: 1.6em;
   color: white;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const NavLinkIndicator = styled.div`

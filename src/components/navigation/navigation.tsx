@@ -11,6 +11,7 @@ import {
 import githubSvg from "../../assets/images/github-icon.svg";
 import arrowSvg from "../../assets/images/arrow.svg";
 import React, { useEffect, useState } from "react";
+import { onClickUrl } from "../../helper/url-redirect";
 
 interface SingleNavProps {
   text: string;
@@ -100,6 +101,7 @@ export const VerticalNavigation: React.FC<VerticalNavigationProps> = ({
           };
           return (
             <SingleNav
+              key={single.text}
               text={single.text}
               isSelected={single.isSelected}
               onClick={scrollToRef}
@@ -108,7 +110,11 @@ export const VerticalNavigation: React.FC<VerticalNavigationProps> = ({
         })}
         <LineGithub>
           <Line />
-          <GitHubIcon src={githubSvg} alt="" />
+          <GitHubIcon
+            onClick={onClickUrl("https://github.com/knight-byte/Breaking-Bad")}
+            src={githubSvg}
+            alt=""
+          />
         </LineGithub>
       </VerticalNavContainer>
     </>
